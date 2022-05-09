@@ -3,6 +3,14 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
+	<bean id="cal" class="com.gyojincompany.spring_3_1.Calculator" />
 	
+	<bean id="myCal" class="com.gyojincompany.spring_3_1.MyCalculator">
+		<property name="calcu">
+			<ref bean="cal" />
+		</property>
+		<property name="a" value="1000"></property>
+		<property name="b" value="2000"></property>	
+	</bean>
 
 </beans>
